@@ -32,7 +32,7 @@ body {
 }
 
 .circle {
-    background-color: #1c1525;
+    background-color: #8858c7;
     height: 200px;
     width: 200px;
     border-radius: 50%;
@@ -128,4 +128,41 @@ nav ul li + li + li {
 .content p {
     color: #333;
     line-height: 1.5;
+}
+
+.search {
+    position: relative;
+    float: right;
+}
+
+.input {
+    font-size: 19px;
+    height: 30px;
+    width: 30px;
+    transition: width 0.3s ease;
+}
+
+.btn {
+    background-color: #8858c7;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    transition: transform 0.3s ease;
+}
+
+.btn:focus, input:focus {
+    outline: none;
+}
+
+.search.active .input {
+    width: 200px;
+}
+
+.search.active .btn {
+    transform: translateX(198px);
 }
